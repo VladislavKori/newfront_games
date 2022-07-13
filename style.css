@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0d0d12;
+}
+
+:root {
+  --font-family-nunito: "Nunito";
+  --font-family-montserrat: "Montserrat";
+}
+
+.games {
+  display: flex;
+  flex-direction: column;
+}
+.games__header {
+  display: flex;
+  justify-content: flex-end;
+}
+.games__all-games-btn {
+  display: flex;
+  align-items: center;
+
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 17px;
+
+  margin: 10px 0;
+  padding: 6px 15px;
+
+  cursor: pointer;
+}
+.games__all-games-btn_text {
+  font-family: var(--font-family-nunito);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+.games__all-games-btn_right-icon {
+    margin-left: 5px;
+}
+.games__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 25px;
+}
+.games__item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.games__link {
+  text-decoration: none;
+}
+.games__preview {
+  width: 320px;
+  height: 320px;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 7px;
+  overflow: hidden;
+
+  margin-bottom: 15px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+.games__link {
+  font-family: var(--font-family-montserrat);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.games__like {
+    width: 45px;
+    height: 45px;
+    fill: rgba(255, 255, 255, 0.26);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.games__like_added {
+    fill: #5AA6FF;
+}
+.games__like path {
+    width: 100%;
+    height: 100%;
+}
+.games__preview:hover .games__like {
+    opacity: 1;
+}
